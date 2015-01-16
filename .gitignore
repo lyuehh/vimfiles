@@ -2,3 +2,6 @@
 .vimrc.before
 .vundles.local
 sessions
+m.sh
+y.sh
+bundle
