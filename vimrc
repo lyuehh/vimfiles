@@ -8,30 +8,22 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/vundles/ "Submodules
+"set rtp+=~/.vim/vundles/ "Submodules
 call vundle#begin()
 
 " let Vundle manage Vundle (required)
 Plugin 'gmarik/vundle'
 
 " web development
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'digitaltoad/vim-jade.git'
-Plugin 'groenewege/vim-less.git'
-Plugin 'itspriddle/vim-jquery.git'
 Plugin 'jtratner/vim-flavored-markdown.git'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'garbas/vim-snipmate.git'
 Plugin 'nelstrom/vim-markdown-preview'
 Plugin 'skwp/vim-html-escape'
 Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-haml'
 Plugin 'honza/vim-snippets'
-Plugin 'toyamarinyon/vim-swift'
-Plugin 'vim-ruby/vim-ruby.git'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'othree/html5.vim'
+Pundle 'sheerun/vim-polyglot'
 
 " git
 Plugin 'gregsexton/gitv'
@@ -108,6 +100,7 @@ Plugin 'vim-scripts/sudo.vim'
 Plugin 'goldfeld/ctrlr.vim'
 "Plugin 'Mark--Karkat'
 Plugin 'scratch.vim'
+Plugin 'vim-cursorword'
 
 let g:vundle_default_git_proto = 'git'
 if filereadable(expand("~/.vim/.vundles.local"))

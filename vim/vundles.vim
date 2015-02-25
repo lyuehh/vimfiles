@@ -13,23 +13,14 @@ call vundle#begin()
 Plugin "gmarik/vundle"
 
 " web development
-Plugin "pangloss/vim-javascript"
-Plugin "othree/javascript-libraries-syntax.vim"
-Plugin "digitaltoad/vim-jade.git"
-Plugin "groenewege/vim-less.git"
-Plugin "itspriddle/vim-jquery.git"
 Plugin "jtratner/vim-flavored-markdown.git"
-Plugin "kchmck/vim-coffee-script"
 Plugin "scrooloose/syntastic.git"
 Plugin "garbas/vim-snipmate.git"
 Plugin "nelstrom/vim-markdown-preview"
 Plugin "skwp/vim-html-escape"
 Plugin "mattn/emmet-vim"
-Plugin "tpope/vim-haml"
 Plugin "honza/vim-snippets"
-Plugin "toyamarinyon/vim-swift"
-Plugin "vim-ruby/vim-ruby.git"
-Plugin "jnwhiteh/vim-golang"
+Pundle 'sheerun/vim-polyglot'
 
 " git
 Plugin "gregsexton/gitv"
