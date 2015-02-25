@@ -22,8 +22,11 @@ Plugin 'nelstrom/vim-markdown-preview'
 Plugin 'skwp/vim-html-escape'
 Plugin 'mattn/emmet-vim'
 Plugin 'honza/vim-snippets'
-Plugin 'othree/html5.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'itspriddle/vim-jquery.git'
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " git
 Plugin 'gregsexton/gitv'
