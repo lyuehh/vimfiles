@@ -23,7 +23,7 @@ Plugin 'skwp/vim-html-escape'
 Plugin 'mattn/emmet-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'othree/html5.vim'
-Pundle 'sheerun/vim-polyglot'
+Plugin 'sheerun/vim-polyglot'
 
 " git
 Plugin 'gregsexton/gitv'
