@@ -10,9 +10,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 "set rtp+=~/.vim/vundles/ "Submodules
 call vundle#begin()
+let g:vundle_default_git_proto = 'git'
 
 " let Vundle manage Vundle (required)
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " web development
 Plugin 'jtratner/vim-flavored-markdown.git'
@@ -27,6 +28,8 @@ Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'itspriddle/vim-jquery.git'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 " git
 Plugin 'gregsexton/gitv'
@@ -37,10 +40,12 @@ Plugin 'tpope/vim-git'
 " appearance
 Plugin 'chrisbra/color_highlight.git'
 Plugin 'skwp/vim-colors-solarized'
+"Plugin 'chriskempson/base16-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jby/tmux.vim.git'
 Plugin 'morhetz/gruvbox'
 Plugin 'xsunsmile/showmarks.git'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " textobject
 Plugin 'austintaylor/vim-indentobject'
@@ -105,7 +110,6 @@ Plugin 'goldfeld/ctrlr.vim'
 Plugin 'scratch.vim'
 Plugin 'vim-cursorword'
 
-let g:vundle_default_git_proto = 'git'
 if filereadable(expand("~/.vim/.vundles.local"))
   source ~/.vim/.vundles.local
 endif
