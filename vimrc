@@ -30,6 +30,7 @@ Plugin 'itspriddle/vim-jquery.git'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'justinj/vim-react-snippets'
 
 " git
 Plugin 'gregsexton/gitv'
