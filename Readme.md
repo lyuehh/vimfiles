@@ -4,8 +4,9 @@
 
 for Mac & Linux:
 
-* `ln -s ~/.vimfils/vim ~/.vim`
-* `ln -s ~/.vimfiles/vimrc ~/.vimrc`
+* `cd ~`
+* `ln -s .vimfils/vim ./.vim`
+* `ln -s .vimfiles/vimrc ./.vimrc`
 * `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
 for Windows:
