@@ -31,6 +31,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'justinj/vim-react-snippets'
+Plugin 'marijnh/tern_for_vim'
 
 " git
 Plugin 'gregsexton/gitv'
