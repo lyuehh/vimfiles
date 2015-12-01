@@ -18,7 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 " web development
 Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'garbas/vim-snipmate.git'
+"Plugin 'garbas/vim-snipmate.git'
+Plugin 'SirVer/ultisnips'
 Plugin 'nelstrom/vim-markdown-preview'
 Plugin 'skwp/vim-html-escape'
 Plugin 'mattn/emmet-vim'
@@ -31,7 +32,9 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'justinj/vim-react-snippets'
-Plugin 'marijnh/tern_for_vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'neovimhaskell/haskell-vim'
+"Plugin 'marijnh/tern_for_vim'
 
 " git
 Plugin 'gregsexton/gitv'
@@ -70,6 +73,7 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'skwp/greplace.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'rizzatti/dash.vim'
 
 " project
 Plugin 'jistr/vim-nerdtree-tabs.git'
@@ -82,6 +86,7 @@ Plugin 'editorconfig-vim'
 " vim-improvements
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Raimondi/delimitMate'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete.git'
 Plugin 'briandoll/change-inside-surroundings.vim.git'
 Plugin 'godlygeek/tabular'
