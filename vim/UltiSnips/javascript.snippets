@@ -39,11 +39,11 @@ snippet h5
 endsnippet
 
 snippet a
-<a href="${1:javascript:;}"${2: class="${3}"}>$0</a>
+<a href="${1:javascript:}"${2: class="${3}"}>$0</a>
 endsnippet
 
 snippet hjs
-href="javascript:;"
+href="javascript:"
 endsnippet
 
 snippet ifa
@@ -71,65 +71,65 @@ endsnippet
 
 ## react
 snippet cdm "component did mount" b
-componentDidMount: function() {
+componentDidMount() {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cdup "component did update" b
-componentDidUpdate: function(prevProps, prevState) {
+componentDidUpdate(prevProps, prevState) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwm "component will mount" b
-componentWillMount: function() {
+componentWillMount() {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwr "component will receive props" b
-componentWillReceiveProps: function(nextProps) {
+componentWillReceiveProps(nextProps) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwun "component will unmount" b
-componentWillUnmount: function() {
+componentWillUnmount() {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwu "component will update" b
-componentWillUpdate: function(nextProps, nextState) {
+componentWillUpdate(nextProps, nextState) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cx
 cx({
 	${1}: ${2}
-});
+})
 endsnippet
 
 snippet fup
-forceUpdate(${1:callback});
+forceUpdate(${1:callback})
 endsnippet
 
 snippet gdp "get default props" b
-getDefaultProps: function() {
+getDefaultProps() {
 	return {
 		${1}
-	};
-},$0
+	}
+}$0
 endsnippet
 
 snippet gis "get initial state" b
-getInitialState: function() {
+getInitialState() {
 	return {
 		${1}: ${2}
-	};
-},$0
+	}
+}$0
 endsnippet
 
 snippet ism "is mounted"
@@ -141,19 +141,19 @@ snippet jsx "define jsx dom" b
  * @jsx React.DOM
  */
 
-var React = require('react');
+var React = require('react')
 }
 var ${2:ClassName} = React.createClass({
 
 render: function() {
 	return (
 		${VISUAL}$4
-	);
+	)
 }
 
-});
+})
 $0
-${3:module.exports = $2;}
+${3:module.exports = $2}
 endsnippet
 
 snippet rcs "create class" b
@@ -161,10 +161,21 @@ const ${2:ClassName} = React.createClass({
 	render: function() {
 		return (
 			${VISUAL}$0
-		);
+		)
 	}
-});
+})
 endsnippet
+
+snippet rcc "create component" b
+class $0 extends Component {
+	render() {
+		return (
+			$1
+		)
+	}
+}
+endsnippet
+
 
 snippet ril "inline react"
 {(() => {
@@ -186,25 +197,25 @@ var ${1:ClassName} = React.createClass({
 render: function() {
 	return (
 		${VISUAL}$2
-	);
+	)
 }
 
-});
+})
 $0
 endsnippet
 
 snippet ren
-render: function() {
+render() {
 	return (
 		${1:<div />}
-	);
+	)
 }$0
 endsnippet
 
 snippet sst "set state" b
 this.setState({
 	${1}: ${2}
-});$0
+})$0
 endsnippet
 
 snippet scu "should component update"
@@ -222,7 +233,7 @@ this.state.${1}
 endsnippet
 
 snippet trp
-this.transferPropsTo(${VISUAL}$0);
+this.transferPropsTo(${VISUAL}$0)
 endsnippet
 
 # angualr
