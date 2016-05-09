@@ -174,9 +174,9 @@ endif
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set expandtab
 "set noexpandtab
 
@@ -219,6 +219,13 @@ set sidescroll=1
 
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+
+" 
+" =============== nvim =========================
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+endif
+
 
 " ================ Custom Settings ========================
 so ~/.vim/setting.vim

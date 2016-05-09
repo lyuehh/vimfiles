@@ -39,11 +39,11 @@ snippet h5
 endsnippet
 
 snippet a
-<a href="${1:javascript:;}"${2: class="${3}"}>$0</a>
+<a href="${1:javascript:}"${2: class="${3}"}>$0</a>
 endsnippet
 
 snippet hjs
-href="javascript:;"
+href="javascript:"
 endsnippet
 
 snippet ifa
@@ -109,18 +109,19 @@ endsnippet
 snippet cx
 cx({
 	${1}: ${2}
-});
+})
 endsnippet
 
 snippet fup
-forceUpdate(${1:callback});
+forceUpdate(${1:callback})
 endsnippet
 
 snippet gdp "get default props" b
 getDefaultProps() {
 	return {
 		${1}
-	};
+
+	}
 }$0
 endsnippet
 
@@ -128,7 +129,7 @@ snippet gis "get initial state" b
 getInitialState() {
 	return {
 		${1}: ${2}
-	};
+	}
 }$0
 endsnippet
 
@@ -141,19 +142,19 @@ snippet jsx "define jsx dom" b
  * @jsx React.DOM
  */
 
-var React = require('react');
+var React = require('react')
 }
 var ${2:ClassName} = React.createClass({
 
 render: function() {
 	return (
 		${VISUAL}$4
-	);
+	)
 }
 
-});
+})
 $0
-${3:module.exports = $2;}
+${3:module.exports = $2}
 endsnippet
 
 snippet rcs "create class" b
@@ -161,10 +162,21 @@ const ${2:ClassName} = React.createClass({
 	render: function() {
 		return (
 			${VISUAL}$0
-		);
+		)
 	}
-});
+})
 endsnippet
+
+snippet rcc "create component" b
+class $0 extends Component {
+	render() {
+		return (
+			$1
+		)
+	}
+}
+endsnippet
+
 
 snippet ril "inline react"
 {(() => {
@@ -186,10 +198,10 @@ var ${1:ClassName} = React.createClass({
 render: function() {
 	return (
 		${VISUAL}$2
-	);
+	)
 }
 
-});
+})
 $0
 endsnippet
 
@@ -222,7 +234,7 @@ this.state.${1}
 endsnippet
 
 snippet trp
-this.transferPropsTo(${VISUAL}$0);
+this.transferPropsTo(${VISUAL}$0)
 endsnippet
 
 # angualr
@@ -241,5 +253,21 @@ endsnippet
 snippet s123
 `#!/usr/bin/env node
 console.log('123')`
+endsnippet
+
+snippet f
+function $1(${2}) {
+	$3
+}
+endsnippet
+
+snippet proto
+$1.prototype.$2 = function($3) {
+	$4
+}
+endsnippet
+
+snippet clo
+console.log($1)
 endsnippet
 
