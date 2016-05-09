@@ -53,7 +53,7 @@ endsnippet
 ## antd
 
 snippet Row
-<Row${1: className="${2}"}>$0</Row>
+<Row${1: styleName="${2}"}>$0</Row>
 endsnippet
 
 snippet	Col
@@ -71,39 +71,39 @@ endsnippet
 
 ## react
 snippet cdm "component did mount" b
-componentDidMount: function() {
+componentDidMount() {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cdup "component did update" b
-componentDidUpdate: function(prevProps, prevState) {
+componentDidUpdate(prevProps, prevState) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwm "component will mount" b
-componentWillMount: function() {
+componentWillMount() {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwr "component will receive props" b
-componentWillReceiveProps: function(nextProps) {
+componentWillReceiveProps(nextProps) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwun "component will unmount" b
-componentWillUnmount: function() {
+componentWillUnmount() {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cwu "component will update" b
-componentWillUpdate: function(nextProps, nextState) {
+componentWillUpdate(nextProps, nextState) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet cx
@@ -117,19 +117,19 @@ forceUpdate(${1:callback});
 endsnippet
 
 snippet gdp "get default props" b
-getDefaultProps: function() {
+getDefaultProps() {
 	return {
 		${1}
 	};
-},$0
+}$0
 endsnippet
 
 snippet gis "get initial state" b
-getInitialState: function() {
+getInitialState() {
 	return {
 		${1}: ${2}
 	};
-},$0
+}$0
 endsnippet
 
 snippet ism "is mounted"
@@ -194,23 +194,23 @@ $0
 endsnippet
 
 snippet ren
-render: function() {
+render() {
 	return (
 		${1:<div />}
-	);
+	)
 }$0
 endsnippet
 
 snippet sst "set state" b
 this.setState({
 	${1}: ${2}
-});$0
+})$0
 endsnippet
 
 snippet scu "should component update"
-shouldComponentUpdate: function(nextProps, nextState) {
+shouldComponentUpdate(nextProps, nextState) {
 	${1}
-},$0
+}$0
 endsnippet
 
 snippet props "get property" i
