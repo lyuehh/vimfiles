@@ -91,7 +91,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Shougo/neocomplete.git'
 Plugin 'briandoll/change-inside-surroundings.vim.git'
 Plugin 'godlygeek/tabular'
-Plugin 'tomtom/tcomment_vim.git'
+" Plugin 'tomtom/tcomment_vim.git'
+Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/camelcasemotion.git'
 Plugin 'vim-scripts/matchit.zip.git'
 Plugin 'kristijanhusak/vim-multiple-cursors'
@@ -117,6 +118,7 @@ Plugin 'goldfeld/ctrlr.vim'
 "Plugin 'Mark--Karkat'
 Plugin 'scratch.vim'
 Plugin 'vim-cursorword'
+Plugin 'tpope/vim-characterize'
 
 if filereadable(expand("~/.vim/.vundles.local"))
   source ~/.vim/.vundles.local
