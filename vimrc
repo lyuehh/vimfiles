@@ -127,7 +127,7 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-if filereadable(expand("~/vim/.vimrc.before"))
+if filereadable(expand("~/.vim/.vimrc.before"))
   source ~/vim/.vimrc.before
 endif
 
@@ -208,6 +208,8 @@ set wildignore+=*DS_Store*
 set wildignore+=vendor/rails/**
 set wildignore+=vendor/cache/**
 set wildignore+=*.gem
+set wildignore+=node_modules/**
+set wildignore+=bower_components/**
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif

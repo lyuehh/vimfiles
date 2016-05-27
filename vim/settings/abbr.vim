@@ -8,6 +8,6 @@ abbr cl! console.log( )<left><left>
 " Rspec Before
 abbr rbf before { }<left><left>
 
-abbr hcc <!-- -->
+abbr hcc <!-- --><left><left><left><left>
 
 
