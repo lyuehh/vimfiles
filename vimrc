@@ -50,7 +50,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'jby/tmux.vim.git'
 Plugin 'morhetz/gruvbox'
 Plugin 'xsunsmile/showmarks.git'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'dracula/vim'
 
 " textobject
 Plugin 'austintaylor/vim-indentobject'
