@@ -91,8 +91,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Shougo/neocomplete.git'
 Plugin 'briandoll/change-inside-surroundings.vim.git'
 Plugin 'godlygeek/tabular'
-" Plugin 'tomtom/tcomment_vim.git'
-Plugin 'tpope/vim-commentary'
+Plugin 'tomtom/tcomment_vim.git'
+" Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/camelcasemotion.git'
 Plugin 'vim-scripts/matchit.zip.git'
 Plugin 'kristijanhusak/vim-multiple-cursors'
@@ -127,8 +127,9 @@ endif
 call vundle#end()
 filetype plugin indent on
 
+
 if filereadable(expand("~/.vim/.vimrc.before"))
-  source ~/vim/.vimrc.before
+  source ~/.vim/.vimrc.before
 endif
 
 " ================ General Config ====================
@@ -182,8 +183,8 @@ set tabstop=2
 set expandtab
 "set noexpandtab
 
-filetype plugin on
-filetype indent on
+"filetype plugin on
+"filetype indent on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
