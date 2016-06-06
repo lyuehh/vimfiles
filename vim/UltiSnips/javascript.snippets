@@ -53,11 +53,15 @@ endsnippet
 ## antd
 
 snippet Row
-<Row${1: styleName="${2}"}>$0</Row>
+<Row${1: styleName="${2}"}>
+	$0
+</Row>
 endsnippet
 
 snippet	Col
-<Col span="$1">$0</Col>
+<Col span="$1" offset="$2">
+	$0
+</Col>
 endsnippet
 
 snippet	cn
@@ -219,6 +223,12 @@ this.setState({
 })$0
 endsnippet
 
+snippet constr
+constructor(props) {
+  super(props)
+}
+endsnippet
+
 snippet scu "should component update"
 shouldComponentUpdate(nextProps, nextState) {
 	${1}
@@ -270,4 +280,9 @@ endsnippet
 snippet clo
 console.log($1)
 endsnippet
+
+snippet edl
+// eslint-disable-line
+endsnippet
+
 

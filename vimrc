@@ -231,6 +231,8 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
 endif
 
+" ================= new ============
+set nrformats=
 
 " ================ Custom Settings ========================
 so ~/.vim/setting.vim
