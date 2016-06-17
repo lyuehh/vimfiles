@@ -113,10 +113,10 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
+" imap <silent> <C-K> <%=   %><Esc>3hi
 
 " create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
+" imap <silent> <C-J> <%  %><Esc>2hi
 
 " ============================
 " Shortcuts for everyday tasks
@@ -126,6 +126,7 @@ imap <silent> <C-J> <%  %><Esc>2hi
 " this is helpful to paste someone the path you're looking at
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
+
 
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
