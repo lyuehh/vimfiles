@@ -191,9 +191,9 @@ endsnippet
 
 
 snippet pt "propTypes" b
-propTypes: {
+static propTypes = {
 	${1}: React.PropTypes.${2:string}
-},
+}
 endsnippet
 
 snippet rcc "create class/component" b
@@ -221,6 +221,14 @@ snippet sst "set state" b
 this.setState({
 	${1}: ${2}
 })$0
+endsnippet
+
+snippet props "get property" i
+this.props.${1}
+endsnippet
+
+snippet state "get state" i
+this.state.${1}
 endsnippet
 
 snippet constr
