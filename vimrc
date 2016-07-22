@@ -42,6 +42,7 @@ Plugin 'gregsexton/gitv'
 Plugin 'mattn/gist-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
+Plugin 'airblade/vim-gitgutter'
 
 " appearance
 Plugin 'chrisbra/color_highlight.git'
@@ -66,6 +67,10 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'thinca/vim-textobj-function-javascript'
 Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'wellle/targets.vim'
+Plugin 'FooSoft/vim-argwrap'
+Plugin 'vim-scripts/ReplaceWithRegister'
+Plugin 'christoomey/vim-sort-motion'
 
 " search
 Plugin 'justinmk/vim-sneak'
@@ -236,6 +241,8 @@ endif
 
 " ================= new ============
 set nrformats=
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " ================ Custom Settings ========================
 so ~/.vim/setting.vim
