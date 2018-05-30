@@ -8,6 +8,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 "set rtp+=~/.vim/vundles/ "Submodules
 call vundle#begin()
 let g:vundle_default_git_proto = 'git'
@@ -17,7 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " web development
 Plugin 'jtratner/vim-flavored-markdown.git'
-Plugin 'scrooloose/syntastic.git'
+" Plugin 'scrooloose/syntastic.git'
+Plugin 'w0rp/ale'
 "Plugin 'garbas/vim-snipmate.git'
 Plugin 'SirVer/ultisnips'
 "Plugin 'nelstrom/vim-markdown-preview'
@@ -26,6 +28,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'posva/vim-vue'
+Plugin 'sbdchd/neoformat'
 "Plugin 'othree/html5.vim'
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'itspriddle/vim-jquery.git'
@@ -48,7 +51,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'chrisbra/color_highlight'
 "Plugin 'skwp/vim-colors-solarized'
 "Plugin 'chriskempson/base16-vim'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'bling/vim-bufferline'
+
 Plugin 'jby/tmux.vim'
 "Plugin 'morhetz/gruvbox'
 Plugin 'xsunsmile/showmarks'
@@ -93,7 +99,7 @@ Plugin 'editorconfig-vim'
 " vim-improvements
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'Raimondi/delimitMate'
-" Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'godlygeek/tabular'
@@ -123,10 +129,12 @@ Plugin 'vim-scripts/AutoTag'
 Plugin 'vim-scripts/lastpos.vim'
 Plugin 'vim-scripts/sudo.vim'
 Plugin 'goldfeld/ctrlr.vim'
-"Plugin 'Mark--Karkat'
+Plugin 'Mark--Karkat'
 Plugin 'mtth/scratch.vim'
 Plugin 'itchyny/vim-cursorword'
 Plugin 'tpope/vim-characterize'
+Plugin 'styled-components/vim-styled-components'
+Plugin 'jiangmiao/auto-pairs'
 
 if filereadable(expand("~/.vim/.vundles.local"))
   source ~/.vim/.vundles.local
@@ -233,6 +241,10 @@ set sidescroll=1
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
+au BufNewFile,BufRead *.wxml set filetype=html
+au BufNewFile,BufRead *.wxss set filetype=css
+autocmd FileType vue EmmetInstall
+
 " 
 " =============== nvim =========================
 if has('nvim')
@@ -243,6 +255,12 @@ endif
 set nrformats=
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+let g:user_emmet_settings = {
+\  'vue' : {
+\    'extends' : 'html',
+\  },
+\ } 
 
 " ================ Custom Settings ========================
 so ~/.vim/setting.vim
