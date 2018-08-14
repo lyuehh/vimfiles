@@ -5,11 +5,10 @@
 for Mac & Linux:
 
 * `cd ~`
-* `ln -s .vimfils/vim .vim`
-* `ln -s .vimfiles/vimrc .vimrc`
-* `git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim`
+* `ln -s .vimfils/vim ./.vim`
+* `ln -s .vimfiles/vimrc ./.vimrc`
 
 for Windows:
 自己想办法。。。
 
-启动mvim后, shift+:, 输入 PluginInstall, 静静等待安装结束, done~
+启动 vim 或 mvim 后, shift+:, 输入 PlugInstall, 等待安装结束, done~
