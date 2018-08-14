@@ -3,150 +3,116 @@ set nocompatible
 " ========================================
 " Vim plugin configuration
 " ========================================
-" if PluginInstall error, then
-" vim --noplugin -u vim/vundles.vim -N "+set hidden" "+syntax on" +PluginClean! +PluginInstall +qall
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=/usr/local/opt/fzf
-"set rtp+=~/.vim/vundles/ "Submodules
-call vundle#begin()
-let g:vundle_default_git_proto = 'git'
+if has('python3')
+  silent! python3 1
+endif
 
-" let Vundle manage Vundle (required)
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " web development
-Plugin 'jtratner/vim-flavored-markdown.git'
-" Plugin 'scrooloose/syntastic.git'
-Plugin 'w0rp/ale'
-"Plugin 'garbas/vim-snipmate.git'
-Plugin 'SirVer/ultisnips'
-"Plugin 'nelstrom/vim-markdown-preview'
-Plugin 'skwp/vim-html-escape'
-Plugin 'mattn/emmet-vim'
-Plugin 'honza/vim-snippets'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'posva/vim-vue'
-Plugin 'sbdchd/neoformat'
-"Plugin 'othree/html5.vim'
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'itspriddle/vim-jquery.git'
-"Plugin 'othree/javascript-libraries-syntax.vim'
-"Plugin 'mxw/vim-jsx'
-"Plugin 'nsf/gocode', {'rtp': 'vim/'}
-"Plugin 'justinj/vim-react-snippets'
-"Plugin 'lambdatoast/elm.vim'
-"Plugin 'neovimhaskell/haskell-vim'
-"Plugin 'marijnh/tern_for_vim'
+Plug 'w0rp/ale'
+Plug 'SirVer/ultisnips'
+Plug 'skwp/vim-html-escape'
+Plug 'mattn/emmet-vim'
+Plug 'honza/vim-snippets'
+Plug 'sheerun/vim-polyglot'
+Plug 'posva/vim-vue'
+Plug 'sbdchd/neoformat'
 
 " git
-"Plugin 'gregsexton/gitv'
-Plugin 'mattn/gist-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'airblade/vim-gitgutter'
+"Plug 'gregsexton/gitv'
+Plug 'mattn/gist-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'airblade/vim-gitgutter'
 
 " appearance
-Plugin 'chrisbra/color_highlight'
-"Plugin 'skwp/vim-colors-solarized'
-"Plugin 'chriskempson/base16-vim'
-" Plugin 'itchyny/lightline.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'bling/vim-bufferline'
+Plug 'chrisbra/color_highlight'
+"Plug 'skwp/vim-colors-solarized'
+"Plug 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
 
-Plugin 'jby/tmux.vim'
-"Plugin 'morhetz/gruvbox'
-Plugin 'xsunsmile/showmarks'
-Plugin 'dracula/vim'
+Plug 'jby/tmux.vim'
+"Plug 'morhetz/gruvbox'
+Plug 'xsunsmile/showmarks'
+Plug 'dracula/vim'
 
 " textobject
-Plugin 'austintaylor/vim-indentobject'
-Plugin 'bootleq/vim-textobj-rubysymbol'
-Plugin 'coderifous/textobj-word-column.vim'
-Plugin 'kana/vim-textobj-datetime'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-function'
-Plugin 'kana/vim-textobj-user'
-Plugin 'lucapette/vim-textobj-underscore'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'thinca/vim-textobj-function-javascript'
-Plugin 'vim-scripts/argtextobj.vim'
-Plugin 'wellle/targets.vim'
-Plugin 'FooSoft/vim-argwrap'
-Plugin 'vim-scripts/ReplaceWithRegister'
-Plugin 'christoomey/vim-sort-motion'
+Plug 'austintaylor/vim-indentobject'
+Plug 'bootleq/vim-textobj-rubysymbol'
+Plug 'coderifous/textobj-word-column.vim'
+Plug 'kana/vim-textobj-datetime'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-user'
+Plug 'lucapette/vim-textobj-underscore'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'thinca/vim-textobj-function-javascript'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'wellle/targets.vim'
+Plug 'FooSoft/vim-argwrap'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'christoomey/vim-sort-motion'
 
 " search
-Plugin 'justinmk/vim-sneak'
-Plugin 'rking/ag.vim'
-Plugin 'vim-scripts/IndexedSearch'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'skwp/greplace.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'rizzatti/dash.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'rking/ag.vim'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'skwp/greplace.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'rizzatti/dash.vim'
 
 " project
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'editorconfig-vim'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'editorconfig/editorconfig-vim'
 
 " vim-improvements
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'Raimondi/delimitMate'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'Shougo/neocomplete'
-Plugin 'briandoll/change-inside-surroundings.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tomtom/tcomment_vim'
-" Plugin 'tpope/vim-commentary'
-Plugin 'vim-scripts/camelcasemotion'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'terryma/vim-expand-region'
-Plugin 'Keithbsmiley/investigate.vim'
-Plugin 'chrisbra/NrrwRgn'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mattn/webapi-vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'skwp/YankRing.vim'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-ragtag'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-speeddating'
-Plugin 'vim-scripts/AnsiEsc.vim'
-Plugin 'vim-scripts/AutoTag'
-Plugin 'vim-scripts/lastpos.vim'
-Plugin 'vim-scripts/sudo.vim'
-Plugin 'goldfeld/ctrlr.vim'
-Plugin 'Mark--Karkat'
-Plugin 'mtth/scratch.vim'
-Plugin 'itchyny/vim-cursorword'
-Plugin 'tpope/vim-characterize'
-Plugin 'styled-components/vim-styled-components'
-Plugin 'jiangmiao/auto-pairs'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'Shougo/neocomplete'
+Plug 'briandoll/change-inside-surroundings.vim'
+Plug 'godlygeek/tabular'
+Plug 'tomtom/tcomment_vim'
+Plug 'vim-scripts/camelcasemotion'
+Plug 'vim-scripts/matchit.zip'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-expand-region'
+Plug 'Keithbsmiley/investigate.vim'
+Plug 'chrisbra/NrrwRgn'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'mattn/webapi-vim'
+Plug 'sjl/gundo.vim'
+Plug 'skwp/YankRing.vim'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-speeddating'
+Plug 'vim-scripts/AnsiEsc.vim'
+Plug 'vim-scripts/AutoTag'
+Plug 'vim-scripts/lastpos.vim'
+Plug 'vim-scripts/sudo.vim'
+Plug 'goldfeld/ctrlr.vim'
+Plug 'mtth/scratch.vim'
+Plug 'itchyny/vim-cursorword'
+Plug 'tpope/vim-characterize'
+Plug 'styled-components/vim-styled-components'
+Plug 'jiangmiao/auto-pairs'
 
-if filereadable(expand("~/.vim/.vundles.local"))
-  source ~/.vim/.vundles.local
-endif
-
-call vundle#end()
-filetype plugin indent on
-
-
-if filereadable(expand("~/.vim/.vimrc.before"))
-  source ~/.vim/.vimrc.before
-endif
+call plug#end()
 
 " ================ General Config ====================
 
