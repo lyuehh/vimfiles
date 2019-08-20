@@ -30,5 +30,5 @@ let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 " colorscheme solarized
 " colorscheme base16-google
-color Dracula
+color dracula
 set background=dark

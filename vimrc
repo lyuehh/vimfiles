@@ -50,7 +50,7 @@ Plug 'bling/vim-bufferline'
 Plug 'jby/tmux.vim'
 "Plug 'morhetz/gruvbox'
 Plug 'xsunsmile/showmarks'
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " textobject
 Plug 'austintaylor/vim-indentobject'
