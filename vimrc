@@ -10,6 +10,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" new plugin
+Plug 'zxqfl/tabnine-vim'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf'
+" Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+" let g:deoplete#enable_at_startup = 1
+
 " web development
 Plug 'w0rp/ale'
 Plug 'SirVer/ultisnips'
