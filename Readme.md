@@ -5,7 +5,7 @@
 for Mac & Linux:
 
 * `cd ~`
-* `ln -s .vimfils/vim ./.vim`
+* `ln -s .vimfiles/vim ./.vim`
 * `ln -s .vimfiles/vimrc ./.vimrc`
 
 for Windows:
