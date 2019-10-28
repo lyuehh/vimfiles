@@ -10,16 +10,19 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Use release branch
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " new plugin
-Plug 'zxqfl/tabnine-vim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+"Plug 'zxqfl/tabnine-vim'
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
 Plug 'junegunn/fzf'
 " Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'roxma/nvim-yarp'
+"Plug 'roxma/vim-hug-neovim-rpc'
 
 " let g:deoplete#enable_at_startup = 1
 
@@ -91,7 +94,7 @@ Plug 'editorconfig/editorconfig-vim'
 " vim-improvements
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neocomplete'
+" Plug 'Shougo/neocomplete'
 Plug 'briandoll/change-inside-surroundings.vim'
 Plug 'godlygeek/tabular'
 Plug 'tomtom/tcomment_vim'
@@ -104,8 +107,8 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/webapi-vim'
-Plug 'sjl/gundo.vim'
-Plug 'skwp/YankRing.vim'
+Plug 'simnalamburt/vim-mundo'
+"Plug 'skwp/YankRing.vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
