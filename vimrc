@@ -125,7 +125,6 @@ Plug 'goldfeld/ctrlr.vim'
 Plug 'mtth/scratch.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'tpope/vim-characterize'
-Plug 'styled-components/vim-styled-components'
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
